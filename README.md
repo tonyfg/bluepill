@@ -20,14 +20,21 @@ relaunch the app with the same arguments every time it crashes.
 - Will honor Ctrl+C and SIGTERM, although it won't pass these on to the app (see
   the TODO section).
 
-## Installing
+## Install
 
-Just download the latest release from the releases page and start using it.
+Just download the latest release from the
+[releases](https://github.com/tonyfg/bluepill/releases) page, put the executable
+in your $PATH and start using it.
+
+## Build
+
+`go build`
 
 ## TODO
 
 - Pass received signals to the app. This should help with graceful handling of
   Ctrl+C, or system shutdown (as well as apps that make use of other signals).
+- Multi-arch builds
 - Command line arguments to:
   - Allow restarting apps that exit without any error
   - Disabling grace period

@@ -2,6 +2,7 @@ package main
 
 import "os"
 import "os/exec"
+
 // import "os/signal"
 // import "syscall"
 import "time"
@@ -23,7 +24,7 @@ func main() {
 
 		if err == nil {
 			os.Exit(0)
-		} else if time.Now().Sub(last_started_at) < 10 * time.Second {
+		} else if time.Now().Sub(last_started_at) < 10*time.Second {
 			os.Exit(1)
 		}
 	}
